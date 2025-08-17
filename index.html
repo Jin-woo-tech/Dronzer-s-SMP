@@ -2,245 +2,115 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Minecraft Server Name]</title>
-    <link rel="icon" type="image/png" href="media/favicon.png">
-    <link rel="stylesheet" href="media/style.css">
-    <link href="https://fonts.bunny.net/css?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pricing Plans - Bedrock & Java</title>
+  <link href="styles.css" rel="stylesheet" />
 </head>
 
 <body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <nav class="desktop_navbar">
-        <a href="#"><img class="desktop_navbar_logo_img" src="media/logo_small.png" alt="logo"></a>
-        <a href="https://wiki.example.com/" class="desktop_navbar_link">Wiki</a>
-        <a href="#discord" class="desktop_navbar_link scroll">Community</a>
-        <a href="#about" class="desktop_navbar_link scroll">About Us</a>
-        <div class="desktop_navbar_link2_div">
-            <a href="#join" class="desktop_navbar_link2 scroll">Join Us!</a>
-        </div>
-    </nav>
-    <div class="mobile_navbar">
-        <a href="#" class="mobile_navbar_logo_img_a"><img class="mobile_navbar_logo_img" src="media/logo_small.png"
-                alt="logo"></a>
-        <div id="mobile_navbar_links">
-            <a class="mobile_navbar_link" onclick="mobile_navbar_link_hider()" href="https://wiki.example.com/">Wiki</a>
-            <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#discord">Community</a>
-            <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#about">About Us</a>
-            <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#join">Join Us</a>
-        </div>
-        <div class="icon" onclick="mobile_navbar_link_hider()">
-            <i class="fa fa-bars"></i>
-        </div>
-        <script>
-            function mobile_navbar_link_hider() {
-                var x = document.getElementById("mobile_navbar_links");
-                if (x.style.display === "flex") {
-                    x.style.display = "none";
-                } else {
-                    x.style.display = "flex";
-                }
-            } 
-        </script>
+
+  <div class="logo-wrapper">
+    <img src="Dronzer SMP Season 4 Logo.jpeg" alt="Logo" class="logo-animated" />
+  </div>
+
+  <div class="container">
+    <div class="pricing-header">
+      <h2>Select Your Plan</h2>
+      <div id="toggleBilling" class="toggle">
+        <span class="toggle-option active" data-billing="bedrock">Bedrock</span>
+        <span class="toggle-option" data-billing="java">Java</span>
+
+      </div>
     </div>
-    <div class="mainflex">
-        <div class="main1">
-            <a class="main1_logo_a" href="#">
-                <img class="main1_logo" src="media/logo.png" alt="logo">
-            </a>
-            <div class="main1_description">
-                <a>Minecraft,<br>like</a>
-                <a class="main1_actcent">already done before</a><a>.</a>
-            </div>
-            <div class="main1_ipcopier_div">
-                <button class="main1_ipcopier" onclick="copyText()" type="button">
-                    <span class="main1_ipcopier_text1">admin.dronzersmp.fun</span>
-                    <br>
-                    <span class="main1_ipcopier_text2">Click to copy</span>
-                </button>
-                <script>
-                    function copyText() {
-                        navigator.clipboard.writeText
-                            ("play.example.com");
-                    }
-                    $(document).ready(function () {
-                        $('.main1_ipcopier').click(function () {
-                            var popup = $('<div>', { class: 'main1_popup' })
-                                .append($('<h3 class="copy_confirm">').text('Copied IP to clipboard'))
-                            $(this).after(popup);
-                            setTimeout(function () {
-                                popup.remove();
-                            }, 1000);
-                        });
-                    });
-                </script>
-            </div>
-            <a href="#more" class="scroll">
-                <img alt="downarrow" class="main1_downarrow" src="media/downarrow.png">
-            </a>
-            <script>
-                const scrollLinks = document.querySelectorAll('.scroll');
-                scrollLinks.forEach(function (link) {
-                    link.addEventListener('click', function (event) {
-                        event.preventDefault();
-                        const target = document.querySelector(link.getAttribute('href'));
-                        const offsetTop = target.offsetTop;
-                        window.scrollTo({
-                            top: offsetTop,
-                            behavior: 'smooth'
-                        });
-                    });
-                });
-            </script>
-        </div>
-        <div id="more"></div>
-        <div class="main2">
-            <a class="headline">What we have</a>
-            <div class="main2_features_div">
-                <div class="main2_feature">
-                    <img class="main2_feature_img" alt="Feature Image" src="media/placeholder.png">
-                    <a class="main2_feature_headline">Feature 1</a>
-                    <a class="main2_feature_text">Feature description</a>
-                </div>
-                <div class="main2_feature">
-                    <img class="main2_feature_img" alt="Feature Image" src="media/placeholder.png">
-                    <a class="main2_feature_headline">Feature 2</a>
-                    <a class="main2_feature_text">Feature description</a>
-                </div>
-                <div class="main2_feature">
-                    <img class="main2_feature_img" alt="Feature Image" src="media/placeholder.png">
-                    <a class="main2_feature_headline">Feature 3</a>
-                    <a class="main2_feature_text">Feature description</a>
-                </div>
-                <div class="main2_feature">
-                    <img class="main2_feature_img" alt="Feature Image" src="media/placeholder.png">
-                    <a class="main2_feature_headline">Feature 4</a>
-                    <a class="main2_feature_text">Feature description</a>
-                </div>
-                <div class="main2_feature">
-                    <img class="main2_feature_img" alt="Feature Image" src="media/placeholder.png">
-                    <a class="main2_feature_headline">Feature 5</a>
-                    <a class="main2_feature_text">Feature description</a>
-                </div>
-            </div>
-        </div>
-        <div id="discord"></div>
-        <div class="main4">
-            <a class="headline">Join the Discord</a>
-            <div class="main4_dc_div">
-                <iframe class ="main4_dc_widget" src="https://i.pinimg.com/736x/e9/52/3c/e9523cf6fff281cd079443ecba40793a.jpg" width=300" height="350"
-                    title="discord"
-                    sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-                <div class="main4_dc_description_div">
-                    <a class="main4_dc_description_title">Let's talk!</a>
-                    <a class="main4_dc_description"> ・Meet other players <br> ・Ask questions <br> ・Get notified about
-                        updates <br> ・Give feedback <br><br> &amp; more </a>
-                    <a href="https://discord.gg/INVITE" class="main4_dc_button_a">
-                        <div class="main4_dc_button">Join</div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div id="about"></div>
-        <div class="main5">
-            <a class="headline">Who we are</a>
-            <div class="main5_admin_div">
-                <div class="main5_admins_div main5_admins_dev_type2">
-                    <img class="main5_admins_img" alt="admin member img" src="media/member_placeholder.webp">
-                    <div class="main5_admins_description_div">
-                        <a class="main5_admins_description_rank main5_admins_description_rank_owner">[Owner]</a>
-                        <a class="main5_admins_description_title" href="https://example.com">Neelansh Kasniya</a>
-                        <a class="main5_admins_description">Owner<br>description</a>
-                    </div>
-                </div>
-                <div class="main5_admins_div main5_admins_dev_type1">
-                    <img class="main5_admins_img" alt="admin member img" src="https://i.pinimg.com/736x/fc/2e/70/fc2e70af3aeefb4d55d82a1dbeb91313.jpg">
-                    <div class="main5_admins_description_div">
-                        <a class="main5_admins_description_rank main5_admins_description_rank_admin">[Admin]</a>
-                        <a class="main5_admins_description_title" href="https://example.com">Neelansh Kasniya</a>
-                        <a class="main5_admins_description">Admin<br>description</a>
-                    </div>
-                </div>
-            </div>
-            <div class="main5_supporter_div">
-                <div class="main5_supporters_div">
-                    <img class="main5_supporters_img" alt="supporters member img" src="https://i.pinimg.com/736x/5b/5a/b0/5b5ab0c3f86d621972c0767a5b095f0e.jpg">
-                    <div class="main5_supporters_description_div">
-                        <a
-                            class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Supporter]</a>
-                        <a class="main5_supporters_description_title">Replacable Supporter 1</a>
-                        <a class="main5_supporters_description">Supporter<br>Description</a>
-                    </div>
-                </div>
-                <div class="main5_supporters_div">
-                    <img class="main5_supporters_img" alt="supporters member img" src="https://i.pinimg.com/736x/18/88/db/1888dbfd156722944399fa530be519c9.jpg">
-                    <div class="main5_supporters_description_div">
-                        <a
-                            class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Supporter]</a>
-                        <a class="main5_supporters_description_title">Replacable Supporter 2</a>
-                        <a class="main5_supporters_description">Supporter<br>Description</a>
-                    </div>
-                </div>
-                <div class="main5_supporters_div">
-                    <img class="main5_supporters_img" alt="supporters member img" src="https://i.pinimg.com/736x/52/40/54/524054252d4df7dabcbf2419cbc007ba.jpg">
-                    <div class="main5_supporters_description_div">
-                        <a
-                            class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Supporter]</a>
-                        <a class="main5_supporters_description_title">Replacable Supporter 3</a>
-                        <a class="main5_supporters_description">Supporter<br>Description</a>
-                    </div>
-                </div>
-                <div class="main5_supporters_div">
-                    <img class="main5_supporters_img" alt="supporters member img" src="https://i.pinimg.com/736x/d7/37/d7/d737d78fa13a241459a2e93de5a063b0.jpg">
-                    <div class="main5_supporters_description_div">
-                        <a
-                            class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Supporter]</a>
-                        <a class="main5_supporters_description_title">Replacable Supporter 4</a>
-                        <a class="main5_supporters_description">Supporter<br>Description</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="join"></div>
-        <div class="main3">
-            <a class="headline">How to join</a>
-            <div class="main3_join_div_div">
-                <div class="main3_join_div">
-                    <a class="main3_join_title">Java</a>
-                    <div class="main3_join_content_div">
-                        <div class="main3_join_categories">
-                            <a>IP:</a>
-                            <a>Version:</a>
-                        </div>
-                        <div class="main3_join_values">
-                            <a>admin.dronzersmp.fun</a>
-                            <a>1.21.7</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="main3_join_div">
-                    <a class="main3_join_title">Bedrock</a>
-                    <div class="main3_join_content_div">
-                        <div class="main3_join_categories">
-                            <a>IP:</a>
-                            <a>Port:</a>
-                        </div>
-                        <div class="main3_join_values">
-                            <a>admin.dronzersmp.fun</a>
-                            <a>25566</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+    <div class="users-slider">
+      <span>Users Inroles</span>
+      <div class="slider-wrap">
+        <input type="range" id="userRange" min="1" max="100" value="7" />
+        <div id="sliderLabel" class="slider-label">4 Users</div>
+      </div>
+      <span></span>
     </div>
-    <footer class="copyright_div">
-        <a href="https://github.com/FQQD/MCServer-Web-Template" class="copyright">Made by Dronzer 2025 - Edited by [XenTz]
-            [01-08-2025]</a>
-    </footer>
+
+    <div class="plans">
+
+      <div class="plan">
+        <h3>Starter</h3>
+        <div class="price">
+          <span class="currency">₹</span>
+          <span class="price-value" data-bedrock="25" data-java="25">25</span>
+          <span class="billing-unit">Bedrock</span>
+        </div>
+        <ul>
+          <li>Unlimited Customers</li>
+          <li>Discord Chat</li>
+          <li>Admin Support</li>
+          <li>0 Bonus Gems</li>
+        </ul>
+        <button>Choose Plan +15 Gems</button>
+      </div>
+
+      <div class="plan">
+        <h3>Most Purchase</h3>
+        <div class="price">
+          <span class="currency">₹</span>
+          <span class="price-value" data-bedrock="45" data-java="45">45</span>
+          <span class="billing-unit">Bedrock</span>
+        </div>
+        <ul>
+          <li>Unlimited Customers</li>
+          <li>Discord Chat</li>
+          <li>Chat Support</li>
+          <li>Limited Emails</li>
+          <li>Admin Support</li>
+          <li>20 Bonus Gems</li>
+        </ul>
+        <button>Choose Plan +35 Gems</button>
+      </div>
+
+      <div class="plan popular">
+        <h3>Popular</h3>
+        <div class="price">
+          <span class="currency">₹</span>
+          <span class="price-value" data-bedrock="109" data-java="109">109</span>
+          <span class="billing-unit">Bedrock</span>
+        </div>
+        <ul>
+          <li>Unlimited Customers</li>
+          <li>Discord Chat</li>
+          <li>Chat Support</li>
+          <li>Unlimited Emails</li>
+          <li>Admin Support</li>
+          <li>80 Bonus Gems</li>
+        </ul>
+        <button>Choose Plan +100 Gems</button>
+      </div>
+
+      <div class="plan">
+        <h3>Enterprise</h3>
+        <div class="price">
+          <span class="currency">₹</span>
+          <span class="price-value" data-bedrock="299" data-java="299">299</span>
+          <span class="billing-unit">Bedrock</span>
+        </div>
+        <ul>
+          <li>Unlimited Customers</li>
+          <li>Discord Chat</li>
+          <li>Chat Support</li>
+          <li>Unlimited Emails</li>
+          <li>Admin Support</li>
+          <li>Premium Status</li>
+          <li>Random Items Chest Key</li>
+          <li>180 Bonus Gems</li>
+        </ul>
+        <button class="Plans">Choose Plan +200 Gems</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
